@@ -48,6 +48,12 @@ class Chk(object):
     def __rdiv__(self, other):
         return Div(other, self)
 
+    def __truediv__(self, other):
+        return Div(self, other)
+
+    def __rtruediv__(self, other):
+        return Div(other, self)
+
     def __pow__(self, other):
         return Exp(other, self)
 
